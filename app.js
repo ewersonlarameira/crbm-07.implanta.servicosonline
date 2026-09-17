@@ -7,7 +7,7 @@ const form = document.querySelector('#searchForm');
 const out = document.querySelector('#resultBody');
 
 const panels = {
-  inscricao: `<div class="info-grid"><div class="info-item"><strong>DEFINITIVO (PRINCIPAL)</strong><span>TIPO DE INSCRIÇÃO</span></div><div class="info-item"><strong>15/03/2026</strong><span>DATA DE INSCRIÇÃO</span></div><div class="info-item"><strong>15/03/2026</strong><span>DATA DA SITUAÇÃO</span></div><div class="info-item"><strong>—</strong><span>DATA DE VALIDADE</span></div><div class="info-item"><strong>ATIVO | ATIVO</strong><span>SITUAÇÃO | DETALHE DA SITUAÇÃO</span></div></div>`,
+  inscricao: `<div class="info-grid"><div class="info-item"><strong>DEFINITIVO (PRINCIPAL)</strong><span>TIPO DE INSCRIÇÃO</span></div><div class="info-item"><strong>30/09/2026</strong><span>DATA DE INSCRIÇÃO</span></div><div class="info-item"><strong>30/09/2026</strong><span>DATA DA SITUAÇÃO</span></div><div class="info-item"><strong>—</strong><span>DATA DE VALIDADE</span></div><div class="info-item"><strong>ATIVO | ATIVO</strong><span>SITUAÇÃO | DETALHE DA SITUAÇÃO</span></div></div>`,
   especialidades: `<div class="info-grid"><div class="info-item"><strong>Biomedicina Estética | ESTÉTICA AVANÇADA</strong><span>ESPECIALIDADES — ENDOLASER FACIAL/CORPORAL</span></div></div>`,
   contatos: `<div class="info-grid"><div class="info-item"><strong>Informações de contato não exibidas por segurança</strong><span>DADOS DE CONTATOS</span></div></div>`,
   responsabilidades: `<div class="info-grid"><div class="info-item"><strong>Não cadastrado</strong><span>TIPO RESPONSABILIDADE</span></div></div>`,
@@ -27,7 +27,7 @@ function showPanel(key) {
 }
 
 function renderResult() {
-  out.innerHTML = `<article class="profile-card"><header class="profile-head"><strong>LUDMILLA LARA MEIRA</strong><span>NOME</span><div class="profile-meta"><b>BIOMÉDICO(A)</b><b>15298</b></div><div class="profile-labels"><span>CATEGORIA</span><span>Nº INSCRIÇÃO NO CONSELHO</span></div></header><div class="tabs" role="tablist" aria-label="Informações do registro fictício"><button id="tab-inscricao" type="button" role="tab" data-panel="inscricao">DADOS DE INSCRIÇÃO</button><button id="tab-especialidades" type="button" role="tab" data-panel="especialidades">ESPECIALIDADES</button><button id="tab-contatos" type="button" role="tab" data-panel="contatos">DADOS DE CONTATOS</button><button id="tab-responsabilidades" type="button" role="tab" data-panel="responsabilidades">RESPONSABILIDADES</button><button id="tab-areas" type="button" role="tab" data-panel="areas">ÁREAS DE ATUAÇÃO</button></div><section id="tabPanel" class="tab-panel" role="tabpanel"></section><p class="fiction-note"></p></article>`;
+  out.innerHTML = `<article class="profile-card"><header class="profile-head"><strong>LUDMILLA LARA MEIRA</strong><span>NOME</span><div class="profile-meta"><b>BIOMÉDICO(A)</b><b>15298</b></div><div class="profile-labels"><span>CATEGORIA</span><span>Nº INSCRIÇÃO NO CONSELHO</span></div></header><div class="tabs" role="tablist" aria-label="Informações do registro"><button id="tab-inscricao" type="button" role="tab" data-panel="inscricao">DADOS DE INSCRIÇÃO</button><button id="tab-especialidades" type="button" role="tab" data-panel="especialidades">ESPECIALIDADES</button><button id="tab-contatos" type="button" role="tab" data-panel="contatos">DADOS DE CONTATOS</button><button id="tab-responsabilidades" type="button" role="tab" data-panel="responsabilidades">RESPONSABILIDADES</button><button id="tab-areas" type="button" role="tab" data-panel="areas">ÁREAS DE ATUAÇÃO</button></div><section id="tabPanel" class="tab-panel" role="tabpanel"></section><p class="fiction-note"></p></article>`;
   out.querySelectorAll('[role="tab"]').forEach(button => {
     button.addEventListener('click', () => showPanel(button.dataset.panel));
     button.addEventListener('keydown', event => {
@@ -46,6 +46,6 @@ form.addEventListener('reset', () => { out.innerHTML = ''; });
 form.addEventListener('submit', event => {
   event.preventDefault();
   const hasFilter = [...form.querySelectorAll('input')].some(input => input.value.trim());
-  if (!hasFilter) { out.innerHTML = '<p class="message">Informe ao menos um filtro para realizar a consulta demonstrativa.</p>'; return; }
+  if (!hasFilter) { out.innerHTML = '<p class="message">Informe ao menos um filtro para realizar a consulta.</p>'; return; }
   renderResult();
 });
