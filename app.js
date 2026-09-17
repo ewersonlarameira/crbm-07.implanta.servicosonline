@@ -55,7 +55,12 @@ form.addEventListener('submit', event => {
     return;
   }
 
-  const consultaValida = registro === '15298' && !nome && !documento;
+  const nomeNormalizado = nome.replace(/\s+/g, ' ').toUpperCase();
+  const documentoNormalizado = documento.replace(/\D/g, '');
+  const registroValido = !registro || registro === '15298';
+  const nomeValido = !nome || nomeNormalizado === 'LUDMILLA LARA MEIRA';
+  const documentoValido = !documento || documentoNormalizado === '10794337759';
+  const consultaValida = registroValido && nomeValido && documentoValido;
 
   if (!consultaValida) {
     out.innerHTML = '<p class="message" role="alert">Nenhum registro encontrado para os dados informados.</p>';
