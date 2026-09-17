@@ -45,7 +45,22 @@ function renderResult() {
 form.addEventListener('reset', () => { out.innerHTML = ''; });
 form.addEventListener('submit', event => {
   event.preventDefault();
-  const hasFilter = [...form.querySelectorAll('input')].some(input => input.value.trim());
-  if (!hasFilter) { out.innerHTML = '<p class="message">Informe ao menos um filtro para realizar a consulta.</p>'; return; }
+
+  const registro = form.querySelector('#registro').value.trim();
+  const nome = form.querySelector('#nome').value.trim();
+  const documento = form.querySelector('#documento').value.trim();
+
+  if (!registro && !nome && !documento) {
+    out.innerHTML = '<p class="message">Informe ao menos um filtro para realizar a consulta.</p>';
+    return;
+  }
+
+  const consultaValida = registro === '15298' && !nome && !documento;
+
+  if (!consultaValida) {
+    out.innerHTML = '<p class="message" role="alert">Nenhum registro encontrado para os dados informados.</p>';
+    return;
+  }
+
   renderResult();
 });
