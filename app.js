@@ -7,8 +7,8 @@ const form = document.querySelector('#searchForm');
 const out = document.querySelector('#resultBody');
 
 const panels = {
-  inscricao: `<div class="info-grid"><div class="info-item"><strong>DEFINITIVO (PRINCIPAL)</strong><span>TIPO DE INSCRIÇÃO</span></div><div class="info-item"><strong>30/09/2026</strong><span>DATA DE INSCRIÇÃO</span></div><div class="info-item"><strong>30/09/2026</strong><span>DATA DA SITUAÇÃO</span></div><div class="info-item"><strong>—</strong><span>DATA DE VALIDADE</span></div><div class="info-item"><strong>ATIVO | ATIVO</strong><span>SITUAÇÃO | DETALHE DA SITUAÇÃO</span></div></div>`,
-  especialidades: `<div class="info-grid"><div class="info-item"><strong>Biomedicina Estética | ESTÉTICA AVANÇADA</strong><span>ESPECIALIDADES — ENDOLASER FACIAL/CORPORAL</span></div></div>`,
+  inscricao: `<div class="info-grid"><div class="info-item"><strong>DEFINITIVO (PRINCIPAL)</strong><span>TIPO DE INSCRIÇÃO</span></div><div class="info-item"><strong>30/09/2026</strong><span>DATA DE INSCRIÇÃO</span></div><div class="info-item"><strong>30/09/2026</strong><span>DATA DA SITUAÇÃO</span></div><div class="info-item"><strong></strong><span>DATA DE VALIDADE</span></div><div class="info-item"><strong>ATIVO | ATIVO</strong><span>SITUAÇÃO | DETALHE DA SITUAÇÃO</span></div></div>`,
+  especialidades: `<div class="info-grid"><div class="info-item"><strong>Biomedicina Estética | Estética Avançada | Endolaser Facil/Corporal | Harmonização Facial/Corporal</strong><span>ESPECIALIDADES ATIVAS</span></div></div>`,
   contatos: `<div class="info-grid"><div class="info-item"><strong>Informações de contato não exibidas por segurança</strong><span>DADOS DE CONTATOS</span></div></div>`,
   responsabilidades: `<div class="info-grid"><div class="info-item"><strong>Não cadastrado</strong><span>TIPO RESPONSABILIDADE</span></div></div>`,
   areas: `<div class="info-grid"><div class="info-item"><strong>Área de Atuação</strong><span>ÁREAS DE ATUAÇÃO — ESTÉTICA AVANÇADA</span></div></div>`
