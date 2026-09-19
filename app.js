@@ -15,7 +15,7 @@ const records = [
     dataInscricao: '30/09/2026',
     dataSituacao: '30/09/2026',
     especialidades: 'Biomedicina Estética',
-    areas: 'Área de Atuação | Estética'
+    areas: 'Estética'
   },
   {
     nome: 'GRAZIELE SOUSA DOS SANTOS',
