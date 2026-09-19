@@ -11,11 +11,11 @@ const records = [
     nome: 'LUDMILLA LARA MEIRA',
     registro: '15298',
     cpf: '10794337759',
-    categoria: 'BIOMÉDICO(A)',
+    categoria: 'BIOMÉDICO',
     dataInscricao: '30/09/2026',
     dataSituacao: '30/09/2026',
-    especialidades: 'Biomedicina Estética | Estética Avançada | Endolaser Facial-Corporal | Harmonização Facial-Corporal',
-    areas: 'Área de Atuação | Estética Avançada'
+    especialidades: 'Biomedicina Estética',
+    areas: 'Área de Atuação | Estética'
   },
   {
     nome: 'GRAZIELE SOUSA DOS SANTOS',
