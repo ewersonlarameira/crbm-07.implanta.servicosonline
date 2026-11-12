@@ -26,6 +26,16 @@ const records = [
     dataSituacao: '27/04/2026',
     especialidades: 'Biomedicina Estética | Imagenologia',
     areas: 'Não cadastrado'
+  },
+  {
+    nome: 'LÍVEA GABRIELA HOLM PEREIRA',
+    registro: '11206',
+    categoria: 'BIOMÉDICO',
+    conselho: 'CRBM-7',
+    dataExpedicao: '19/06/2026',
+    validadeCedula: '19/06/2031',
+    especialidades: 'Patologia Clínica (Análises Clínicas) | Biomedicina Estética',
+    areas: 'Não informado no comprovante'
   }
 ];
 
